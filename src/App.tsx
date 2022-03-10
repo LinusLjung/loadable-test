@@ -1,3 +1,4 @@
+import React from 'react';
 import loadable from '@loadable/component';
 
 const Brands = loadable(() => import('./pages/Brands'));

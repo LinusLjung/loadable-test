@@ -22,15 +22,14 @@ function getConfig(isServer: boolean): Configuration {
     }),
     module: {
       rules: [
-        {
-          test: /\.jsx?$/,
-          exclude: /node_modules/,
-          loader: 'babel-loader',
-        },
+        // {
+        //   test: /\.jsx?$/,
+        //   exclude: /node_modules/,
+        // },
         {
           test: /\.tsx?$/,
           exclude: /node_modules/,
-          loader: 'ts-loader',
+          use: ['babel-loader'],
         }
       ],
     },
