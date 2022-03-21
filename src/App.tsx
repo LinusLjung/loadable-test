@@ -1,15 +1,22 @@
 import React from 'react';
-import loadable from '@loadable/component';
 
-const Brands = loadable(() => import('./pages/Brands'));
+const Brands = React.lazy(() => import('./pages/Brands'));
 
 function App() {
-  return (
-    <>
+  return (<>
+            <html lang="en" dir="ltr">
+            <head>
+              <meta charSet="utf-8" />
+              <meta name="viewport" content="width=device-width, initial-scale=1" />
+              <link rel="shortcut icon" href="https://www.na-kd.com/favicons/na-kd/favicon.ico" />
+              <script src="/main.js" defer />  
+            </head>
+            <body>
       <h1>App</h1>
       <Brands />
-    </>
-  );
+    </body>
+    </html>
+    </>);
 }
 
 export default App;
